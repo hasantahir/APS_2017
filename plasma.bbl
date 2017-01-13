@@ -41,4 +41,13 @@ M.~Abramowitz and I.~Stegun, \emph{Handbook of Mathematical Functions: With
   National Bureau of Standards.\hskip 1em plus 0.5em minus 0.4em\relax Dover,
   1968.
 
+\bibitem{herranz2012high}
+G.~Herranz, F.~S{\'a}nchez, N.~Dix, M.~Scigaj, and J.~Fontcuberta, ``High
+  mobility conduction at (110) and (111) $\mathrm{LaAlO_3/SrTiO_3}$
+  interfaces,'' \emph{Scientific Reports}, vol.~2, p. 758, 2012.
+
+\bibitem{senior1979backscattering}
+T.~Senior, ``Backscattering from resistive strips,'' \emph{IEEE Transactions on
+  Antennas and Propagation}, vol.~27, no.~6, pp. 808--813, 1979.
+
 \end{thebibliography}

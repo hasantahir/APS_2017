@@ -111,7 +111,7 @@ urlcolor={blue!80!black}
 
 \begin{document}
 
-\title{Bla Bla Bla }
+\title{An Integral Equation Scheme for Plasma based Devices}
 
 
 % author names and affiliations
@@ -225,7 +225,9 @@ where $\Delta$ is the width of the pulse basis functions.
 %
 \subsection{Current Distribution}
 %
-Fig. \ref{fig:edgeon} shows the absolute value of the tangential surface electric current on a TM-wave excited plate of length $3 \lambda$ at edge-on ($\phi_i = \pi$). A Gallium Arsenide (GaAs) based 2DEG is considered where material data was taken from measurements in \cite{burke2000high} and the results are compared with a PEC plate of same length and a lossy sheet of dielectric constant $4 - .4j$. Fig. \ref{fig:normal} shows the current distribution under normal incidence $(\phi_i = \pi/2)$.
+Fig. \ref{fig:edgeon} shows the absolute value of the tangential surface electric current on a TM-wave excited plate of length $3 \lambda$ at edge-on ($\phi_i = \pi$). Gallium Arsenide ($\mathrm{GaAs}/\mathrm{AlGaAs}$) and Strontium Titanate ($\mathrm{LaAlO_3}/\mathrm{SrTiO_3}$) based 2DEG plasma sheets are considered where material data has been taken from measurements in \cite{burke2000high} and \cite{herranz2012high} respectively, and the results are compared with a PEC plate of same length \cite{senior1979backscattering}.
+
+% Fig. \ref{fig:normal} shows the current distribution under normal incidence $(\phi_i = \pi/2)$.
 %
 \begin{figure}[h]
   \normalsize
@@ -235,13 +237,13 @@ Fig. \ref{fig:edgeon} shows the absolute value of the tangential surface electri
   \label{fig:edgeon}
 \end{figure}
 %
-\begin{figure}[h]
-  \normalsize
-  \centering
-  \includestandalone[width=.5\textwidth]{figures/currents_normal_3}
-  \caption{Current Distributions on a $3\lambda$ plate at normal incidence}
-  \label{fig:normal}
-\end{figure}
+% \begin{figure}[h]
+%   \normalsize
+%   \centering
+%   \includestandalone[width=.5\textwidth]{figures/currents_normal_3}
+%   \caption{Current Distributions on a $3\lambda$ plate at normal incidence}
+%   \label{fig:normal}
+% \end{figure}
 %
 \subsection{Far-field}
 %
@@ -256,10 +258,15 @@ where $\phi_i$ is the angle of incidence. The results are shown in Fig. \ref{fig
 %
 \begin{figure}[h]
   \centering
-  \includestandalone[width=.5\textwidth]{figures/farfield_125}
-  \caption{Bacscetterd fields from  a sheet of length $1.25\lambda$}
+  \includestandalone[width=.5\textwidth]{figures/farfield_1255}
+  \caption{Backscattered fields from different sheets of length $1.25\lambda$}
   \label{fig:rcs}
 \end{figure}
+%
+\section{Conclusion}
+%
+We present a new class of surface integral equations for infinitesimally thin dielectric sheets based on surface equivalence theorem. The electromagnetic response to radiation to external radiation is investigated. Results are shown for the current induced and far-zone response. Material characterization using measurable physical quantities is also outlined.
+%
 \bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
 \bibliography{mybib}
