@@ -142,7 +142,7 @@ Email: nevels@ece.tamu.edu}
 %
 \begin{abstract}
   %\boldmath
-  An integral equation formulation for a thin dielectric sheet is presented using the surface equivalence theorem. The advantageous properties of plasma waves, chief among them surface wave propagation are briefly discussed. Numerical results are presented to illustrate the scattering properties of the sheet with different material properties.
+  An integral equation formulation for a thin dielectric sheet is presented using the surface equivalence theorem. The advantageous properties of plasma waves, chief among them miniaturization of antennas and microwave devices are briefly discussed. Numerical results are presented to illustrate the scattering properties of the sheet with different material properties.
 \end{abstract}
 
 \IEEEpeerreviewmaketitle
@@ -207,7 +207,7 @@ where $\mu$ is the free-space permeability, $J_z$ is the yet-unknown surface ele
   \label{fig:plate}
 \end{figure}
 %
-The corresponding magnetic field expressed in terms of the magnetic current $M_x$ is expressed as:
+The corresponding magnetic field in terms of the magnetic current $M_x$ is expressed as:
 \begin{align}
   H_i = \frac{\O \u}{8}\int \limits_{0}^{L}  M_x(x')\left[ \E_1 H_0^{(2)}(k_1 \mathrm r) + \E_1 H_2^{(2)}(k_2 \mathrm r) \right.\notag\\
   \left. + \E_2 H_0^{(2)}(k_2 \mathrm r) + \E_2 H_2^{(2)}(k_2 \mathrm r) \right]\mathrm{d}x'
@@ -220,26 +220,26 @@ The expressions for $\mathrm{TE_z}$ polarization are duals of \eqref{eq:plateE} 
 %%%%%%%%%%%%%%%%
 \section{Numerical Results}
 %
-A method of moments (MoM) solution using pulse basis functions with point matching method is implemented to compute the currents in \eqref{eq:plateE} and \eqref{eq:plateH} respectively. The far-field is calculated using the Total Field Scattered Field (TFSF) technique determined by:
+A method of moments (MoM) solution using pulse basis functions with point matching is implemented to compute the currents in \eqref{eq:plateE} and \eqref{eq:plateH} respectively. The far-field is calculated using the Total Field Scattered Field (TFSF) technique determined by:
 \begin{equation}
   \sigma_{\phi} \simeq \int \limits_{0}^{L} \left[J_z(x')\eta_1 + M_x(x')\sin(\phi_i)\right] e^{j k_1 x' \cos(\phi_i)} \mathrm{d}x'
   \label{eq:far-field}
 \end{equation}
 where $\eta_1$ is the free-space intrinsic impedance and $\phi_i$ is the angle of incidence.
 %
-We explore the scattering properties of Gallium Arsenide ($\mathrm{GaAs}/\mathrm{AlGaAs}$) and Strontium Titanate ($\mathrm{LaAlO_3}/\mathrm{SrTiO_3}$) based 2DEG plasma sheets where pertinent material data has been taken from measurements in \cite{burke2000high} and \cite{herranz2012high} respectively, and the results are compared with a PEC plate of same length. Fig. \ref{fig:rcs} shows the backscatter cross-sections from Galium Arsenide and Strontium Titanate based sheets are reduced, but not appreciably. Although the result is expected to be lower than the perfect conductor, a relatively small difference illustrates the potentials of such materials in applications such as plasmonic antennas and waveguides. In particular, a 2DEG made from Strontium Titanate with its higher dielectric constant appears to be a better choice.
+We explore the scattering properties of Gallium Arsenide ($\mathrm{GaAs}/\mathrm{AlGaAs}$) and Strontium Titanate ($\mathrm{LaAlO_3}/\mathrm{SrTiO_3}$) based 2DEG plasma sheets where pertinent material data has been taken from measurements in \cite{burke2000high} and \cite{herranz2012high} respectively, and the results are compared with a PEC plate of same length. Fig. \ref{fig:rcs} shows that the backscatter cross-sections from Galium Arsenide and Strontium Titanate based sheets are reduced, but not appreciably. Although the result is expected to be lower than the perfect conductor, a relatively small difference illustrates the potential of these materials in applications such as plasmonic antennas and waveguides. In particular, a 2DEG made from Strontium Titanate with its higher dielectric constant appears to be a better choice.
 %
 \begin{figure}[h]
   \begin{center}
     \noindent
     \includegraphics[width=.5\textwidth]{figures/farfieldTM_2.tex}
-    \caption{Backscattered fields from different sheets of length $2\lambda$ under $\mathrm{TM_z}$ incidence}
+    \caption{Backscattered fields from different sheets of length $2\lambda$ under $\mathrm{TM_z}$ plane wave incidence}
     \label{fig:rcs}
   \end{center}
 \end{figure}
 %
 
- In order to verify the integral equation proposed, we next consider a sheet of length $2 \lambda$ and dielectric constant of $4$ excited by a $\mathrm{TE}_z$ polarized plane wave. Fig. \ref{fig:rcs} shows the backscattered field computed from \eqref{eq:far-field} compared with a resistive-sheet model \cite{senior1987sheet} using Impedance boundary conditions. The results agree well until incident angle of $\pi/4$ below which the diffraction effects from the edges, due to finite thickness of the resistive sheet becomes significant.
+ In order to verify the integral equation proposed, we next consider a sheet of length $2 \lambda$ and dielectric constant of $4$ excited by a $\mathrm{TE}_z$ polarized plane wave. Fig. \ref{fig:rcs} shows the backscattered field computed from \eqref{eq:far-field} compared with a resistive-sheet model \cite{senior1987sheet} using Impedance Boundary Conditions (IBC). The results agree well until incident angle of $\pi/4$ below which the diffraction effects from the edges, due to finite thickness of the resistive sheet becomes significant.
 %
 \begin{figure}[h]
   \begin{center}
@@ -258,7 +258,7 @@ We explore the scattering properties of Gallium Arsenide ($\mathrm{GaAs}/\mathrm
 % %
 \section{Conclusion}
 %
-We present a new class of surface integral equations for infinitesimally thin dielectric sheets based on surface equivalence theorem. The prospects of 2DEG based antennas and plasmonic devices are investigated by exploring the scattering properties of the structures. Results are shown for different polarizations and compared with the state-of-the art literature. Additionally, material characterization using measurable physical quantities is outlined.
+We present a new class of surface integral equations for infinitesimally thin dielectric sheets based on the surface equivalence theorem. The prospects of 2DEG based antennas and plasmonic devices are investigated by exploring the scattering properties of the structures. Results are shown for different polarizations and compared with the state-of-the art literature. Additionally, material characterization using measurable physical quantities is outlined.
 %
 \bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
