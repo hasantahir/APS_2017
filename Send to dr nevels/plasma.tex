@@ -1,7 +1,7 @@
 \documentclass[conference, 10pt]{IEEEtran}
 
 
-%
+% Load Packages
 \usepackage[T1]{fontenc} % optional
 \usepackage[cmex10]{amsmath}
 \usepackage{calc}
@@ -12,8 +12,6 @@
 \usepackage{mdwmath}
 \usepackage{mdwtab}
 \hyphenation{op-tical net-works semi-conduc-tor}
-
-
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{placeins}
@@ -27,12 +25,9 @@ linkcolor={red!50!black},
 citecolor={blue!50!black},
 urlcolor={blue!80!black}
 }
-
-
 \usepackage{booktabs}
 \usepackage{standalone}
 \usepackage{filecontents}
-
 \usepackage{tabularx,colortbl}
 \usepackage{pgfplots}
 \usepackage{tikz}
@@ -40,9 +35,8 @@ urlcolor={blue!80!black}
 \usepackage{tikz-dimline} % For dimensional drawing
 \tikzset{every picture/.append style={font=\normalsize}}
 \usepackage{relsize}
-
 \tikzset{fontscale/.style = {font=\relsize{#1}}
-    }
+}
 \usetikzlibrary{positioning}
 \usetikzlibrary{arrows}
 \usetikzlibrary{patterns}
@@ -51,9 +45,6 @@ urlcolor={blue!80!black}
 \usetikzlibrary{plotmarks}
 \usepackage{grffile}
 \usepackage{mathtools,amssymb,lipsum}
-
-
-
 %%%%%%%%%%
 %%%%%%%%%% TIPS and TRICKS
 %%%%%%%%%%
@@ -102,13 +93,12 @@ urlcolor={blue!80!black}
 \renewcommand{\del}{\nabla}  % nabla operator
 \renewcommand{\^}{\hat}  % unit vector
 % \newcommand*\diff{\mathop{}\!\mathrm{d}} % Define differential operator
-
-
-
-
-
-
-
+%%%%%%%%%%
+%%%%%%%%%%
+%%%%%%%%%%
+%%%%%%%%%%
+%%%%%%%%%% Start of the main document
+%%%%%%%%%%
 \begin{document}
 
 \title{An Integral Equation Scheme for Plasma based Thin Sheets}
@@ -131,7 +121,7 @@ Texas A\&M University\\
 College Station, TX 77843-3128\\
 Email: nevels@ece.tamu.edu}
 }
-%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
@@ -146,14 +136,14 @@ Email: nevels@ece.tamu.edu}
 \end{abstract}
 
 \IEEEpeerreviewmaketitle
-%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 \section{Introduction}
 
 The emergence of high-precision nanoscale fabrication techniques has led to an increased interest in two-dimensional (2D) materials and electronic systems of late, especially in the terahertz frequency regime. One particular intriguing example is the two-dimensional electron gas (2DEG) existing in the multilayer stack of semiconductor structures like high-electron mobility transistors (HEMTs), with remarkable electrical properties such as high conductivity with high values of free-carrier densities. The 2DEG is extremely thin as compared to other layer thicknesses in the stack and therefore, its scattering properties can be found by modeling it as a two-dimensional plasma. An interaction between an external electromagnetic radiation and plasma results in 2D plasmons (surface waves). In this paper, we formulate the scattering response of an infinitesimally thin flat layer of plasma surrounded by free-space using the surface equivalence theorem.
-%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
@@ -199,14 +189,16 @@ Consider a flat plasma sheet of length $L$ and thickness $t$ excited by a $\math
 %
 where $\mu$ is the free-space permeability, $J_z$ is the yet-unknown surface electric current, $H_0^{(2)}(\cdot)$ is the zero-order Hankel function of the second kind and $k_i$ with $i = 1,2$ being the corresponding wave-numbers of the free-space and plasma respectively.
 %
+% Insert diagram with plasma sheet
 \begin{figure}[h]
+  \normalsize
   \centering
   \includestandalone[width=.5\textwidth]{figures/tm_plate}
   \caption{Thin Plasma sheet with $\mathrm{TM_z}$ polarization}
   \label{fig:plate}
 \end{figure}
 %
-%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
@@ -216,7 +208,7 @@ A method of moments (MoM) solution to compute the current $J_z$ in \eqref{eq:pla
 %
 \begin{align}
   Z_{self} = \frac{\O \u}{4} \Delta \left[H_0^{(2)}(k_1 \Delta) +  H_0^{(2)}(k_2 \Delta)\right] + \notag\\
-   \frac{\O \u}{4} \int \limits_{0}^{\Delta} x'\left[ k_1 H_1^{(2)}(k_1 x')  + k_2 H_1^{(2)}(k_2 x')\right] \mathrm{d}x'
+  \frac{\O \u}{4} \int \limits_{0}^{\Delta} x'\left[ k_1 H_1^{(2)}(k_1 x')  + k_2 H_1^{(2)}(k_2 x')\right] \mathrm{d}x'
   \label{eq:self}
 \end{align}
 %
@@ -228,25 +220,23 @@ Fig. \ref{fig:edgeon} shows the absolute value of the tangential surface electri
 
 % Fig. \ref{fig:normal} shows the current distribution under normal incidence $(\phi_i = \pi/2)$.
 %
+% Insert plot for current with edge-on incidennce
 \begin{figure}[h]
-  \normalsize
-  \centering
-  \includestandalone[width=.5\textwidth]{figures/currents_edgeon_3}
-  \caption{Current Distributions on a $3\lambda$ plate at edge-on incidence}
-  \label{fig:edgeon}
+  \begin{center}
+    \noindent
+    \includegraphics[width=3in]{figures/currents_edgeon_3.tex}
+    \caption{Current Distributions on a $3\lambda$ plate at edge-on incidence}
+    \label{fig:edgeon}
+  \end{center}
 \end{figure}
 %
-% \begin{figure}[h]
-%   \normalsize
-%   \centering
-%   \includestandalone[width=.5\textwidth]{figures/currents_normal_3}
-%   \caption{Current Distributions on a $3\lambda$ plate at normal incidence}
-%   \label{fig:normal}
-% \end{figure}
-%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 \subsection{Far-field}
 %
-The normalized scattered electric field in the far-zone can be expressed using the large argument approximation of Hankel functions as:
+The scattered electric field in the far-zone can be expressed by normalizing the large argument approximation of Hankel functions as:
 %
 \begin{equation}
   \lim_{k_1|\v \p - \v \p'|\to\inf} E_z(\v \p) \simeq \int \limits_{0}^{L} J_z(x') e^{j k_1 x' \cos(\phi_i)} \mathrm{d}x'
@@ -255,13 +245,19 @@ The normalized scattered electric field in the far-zone can be expressed using t
 %
 where $\phi_i$ is the angle of incidence. The results are shown in Fig. \ref{fig:rcs}.
 %
+% Insert far-field pattern plot
 \begin{figure}[h]
-  \centering
-  \includestandalone[width=.5\textwidth]{figures/farfield_1255}
-  \caption{Backscattered fields from different sheets of length $1.25\lambda$}
-  \label{fig:rcs}
+  \begin{center}
+    \noindent
+    \includegraphics[width=3in]{figures/farfield_1255.tex}
+    \caption{Backscattered fields from different sheets of length $1.25\lambda$}
+    \label{fig:rcs}
+  \end{center}
 \end{figure}
-%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 \section{Conclusion}
 %
 We present a new class of surface integral equations for infinitesimally thin dielectric sheets based on surface equivalence theorem. The electromagnetic response to external radiation is investigated. Results are shown for the current induced and far-zone response. Material characterization using measurable physical quantities is also outlined.
